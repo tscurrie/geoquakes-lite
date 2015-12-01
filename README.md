@@ -25,8 +25,8 @@ Now, take a moment to familiarize yourself with the layout in `index.html`.
         - loop over it
         - add each title to the page
 
-#### Part 3. Add pins to your map
-Once you're able to access earthquake data, your next goal is to drop a single pin on San Francisco. This is a sanity check.  
+#### Part 2. Add pins to your map
+Once you're able to access earthquake data and have it populate to the info section of hte page, your next goal is to drop a single pin on San Francisco. This is a sanity check.  
 - Next, can you add only the first earthquake to the map?
 - Can you add pins for *all* the earthquakes to the map?
 
