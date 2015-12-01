@@ -11,3 +11,11 @@ $(document).ready(function(){
 
 })
 
+// This is a code snippet that will place a pin at the coordinates lat & lng
+/*
+new google.maps.Marker({
+  position: new google.maps.LatLng(lat,lng),
+  map: map,
+  title: title
+});
+*/
