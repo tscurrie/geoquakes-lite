@@ -16,27 +16,30 @@ $(document).ready(function(){
   	url: weekly_quakes_endpoint,
   	success: function (taco){
   		taco.features.forEach(function (i){
-  		var results = i.properties.title;
+  		var title = i.properties.title;
   		var lon = i.geometry.coordinates[0];
   		var lat = i.geometry.coordinates[1];
   		var mag = i.properties.mag;
       var time = Math.round( (Date.now() - i.properties.time) / (1000 *60*60) );	
       
        
-//   		new google.maps.Marker({
-//   		position: new google.maps.LatLng(lon,lat),
-//   		map: map,
-  		
- 
-// });
+  		new google.maps.Marker({
+    		position: new google.maps.LatLng(lat, lon),
+    		map: map,
+  		  title: title
+      });
 
-  		$('#info').append('<p>' + results + ' ' + lon + ' by ' + lat + ' Magnitude: ' + mag + '<br>' + 'Quake happened ' + time + ' hours ago.' + '</p>');
+
+
+  		$('#info').append('<p>' + 'Title: ' + title + ' ' + '<br>' + 'Location: '+ lon + ' by ' + lat + '<br>'+' Magnitude: ' + mag + '<br>' + 'Quake happened ' + time + ' hours ago.' + '</p>');
+
+
 
   		});
   	}
   });
   
-  console.log(Date.now);
+  
 
 
 
